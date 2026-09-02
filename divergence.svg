@@ -1,49 +1,175 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%">
-  <!-- Внешний контейнер -->
-  <rect x="5" y="5" width="790" height="230" rx="15" fill="#050e07" stroke="#00ff66" stroke-width="2"/>
-  
-  <!-- Сетка глитча / фоновые карточки ламп -->
-  <g fill="#091c10" stroke="#00ff66" stroke-width="1.5" opacity="0.9">
-    <rect x="35" y="30" width="70" height="130" rx="8"/>
-    <rect x="117" y="30" width="26" height="130" rx="4"/>
-    <rect x="155" y="30" width="70" height="130" rx="8"/>
-    <rect x="235" y="30" width="70" height="130" rx="8"/>
-    <rect x="315" y="30" width="70" height="130" rx="8"/>
-    <rect x="395" y="30" width="70" height="130" rx="8"/>
-    <rect x="475" y="30" width="70" height="130" rx="8"/>
-    <rect x="555" y="30" width="70" height="130" rx="8"/>
-    <rect x="635" y="30" width="70" height="130" rx="8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%">
+  <defs>
+    <!-- Зеленое свечение -->
+    <filter id="matrix-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Искажение / Глитч фильтр -->
+    <filter id="glitch-filter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.95" numOctaves="1" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+
+    <!-- Сетка внутри ламп -->
+    <pattern id="grid" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M 4 0 L 0 0 0 4" fill="none" stroke="#003311" stroke-width="0.5" opacity="0.5"/>
+    </pattern>
+
+    <style>
+      .bg {
+        fill: #030a05;
+        stroke: #00ff66;
+        stroke-width: 1.5px;
+        rx: 12px;
+      }
+
+      /* Матричный код на фоне */
+      .matrix-rain {
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        fill: #005522;
+        opacity: 0.35;
+      }
+      
+      @keyframes rainFall {
+        0% { transform: translateY(-100px); opacity: 0; }
+        50% { opacity: 0.5; }
+        100% { transform: translateY(200px); opacity: 0; }
+      }
+
+      .r1 { animation: rainFall 3s linear infinite; }
+      .r2 { animation: rainFall 4.5s linear infinite 1s; }
+      .r3 { animation: rainFall 2.8s linear infinite 0.5s; }
+      .r4 { animation: rainFall 3.8s linear infinite 1.8s; }
+
+      /* Лампы */
+      .tube {
+        fill: #051208;
+        stroke: #008833;
+        stroke-width: 1.5px;
+        rx: 8px;
+      }
+
+      .tube-grid {
+        fill: url(#grid);
+        rx: 6px;
+      }
+
+      .glass {
+        fill: #00ff66;
+        opacity: 0.05;
+      }
+
+      /* Выключенные сегменты ламп */
+      .digit-off {
+        font-family: 'Courier New', Consolas, monospace;
+        font-size: 68px;
+        font-weight: 900;
+        fill: #00220a;
+      }
+
+      /* Светящиеся цифры */
+      .digit-on {
+        font-family: 'Courier New', Consolas, monospace;
+        font-size: 68px;
+        font-weight: 900;
+        fill: #00ff66;
+        filter: url(#matrix-glow);
+      }
+
+      .subtext {
+        font-family: 'Courier New', Consolas, monospace;
+        font-size: 13px;
+        font-weight: bold;
+        fill: #00e65c;
+        letter-spacing: 3px;
+        filter: url(#matrix-glow);
+      }
+
+      /* Переключение мировых линий */
+      @keyframes line1 { 0%, 22% { opacity: 1; } 23%, 100% { opacity: 0; } }
+      @keyframes line2 { 0%, 22% { opacity: 0; } 23%, 45% { opacity: 1; } 46%, 100% { opacity: 0; } }
+      @keyframes line3 { 0%, 45% { opacity: 0; } 46%, 68% { opacity: 1; } 69%, 100% { opacity: 0; } }
+      @keyframes lineFinal { 0%, 68% { opacity: 0; } 69%, 100% { opacity: 1; } }
+
+      .v1 { animation: line1 9s infinite; }
+      .v2 { animation: line2 9s infinite; }
+      .v3 { animation: line3 9s infinite; }
+      .vFinal { animation: lineFinal 9s infinite; }
+
+      /* Матричное искажение / Глитч эффект */
+      @keyframes matrixGlitch {
+        0%, 90%, 100% { transform: translate(0, 0) skewX(0deg); filter: url(#matrix-glow); }
+        92% { transform: translate(-4px, 2px) skewX(10deg); filter: url(#glitch-filter); fill: #33ff88; }
+        94% { transform: translate(4px, -2px) skewX(-6deg); opacity: 0.8; }
+        96% { transform: translate(-2px, -1px) skewX(3deg); }
+        98% { transform: translate(0, 0) skewX(0deg); filter: url(#matrix-glow); }
+      }
+
+      .glitch-layer {
+        animation: matrixGlitch 3.5s infinite;
+      }
+
+      .scanline {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 1px;
+        opacity: 0.15;
+      }
+    </style>
+  </defs>
+
+  <rect width="100%" height="100%" class="bg" />
+
+  <!-- Задний матричный фон -->
+  <g class="matrix-rain">
+    <g class="r1" transform="translate(60, 0)"><text y="20">1010110</text><text y="40">0101101</text><text y="60">1100101</text><text y="80">0011010</text></g>
+    <g class="r2" transform="translate(240, 0)"><text y="20">0110101</text><text y="40">1001011</text><text y="60">0011100</text><text y="80">1101001</text></g>
+    <g class="r3" transform="translate(500, 0)"><text y="20">1101001</text><text y="40">0010110</text><text y="60">1011001</text><text y="80">0100111</text></g>
+    <g class="r4" transform="translate(720, 0)"><text y="20">0011010</text><text y="40">1101001</text><text y="60">0100110</text><text y="80">1011100</text></g>
   </g>
 
-  <!-- Цифры мировой линии (1.048596%) -->
-  <g font-family="'Courier New', monospace" font-weight="900" text-anchor="middle" fill="#00ff66">
-    <!-- Свечение (Glow) -->
-    <g opacity="0.3" fill="#00ff66">
-      <text x="70" y="125" font-size="88">1</text>
-      <text x="130" y="115" font-size="70">.</text>
-      <text x="190" y="125" font-size="88">0</text>
-      <text x="270" y="125" font-size="88">4</text>
-      <text x="350" y="125" font-size="88">8</text>
-      <text x="430" y="125" font-size="88">5</text>
-      <text x="510" y="125" font-size="88">9</text>
-      <text x="590" y="125" font-size="88">6</text>
-      <text x="670" y="125" font-size="88">%</text>
+  <!-- Лампы -->
+  <g transform="translate(45, 35)">
+    <g transform="translate(0,0)"><rect width="80" height="145" class="tube"/><rect width="72" height="137" x="4" y="4" class="tube-grid"/><path d="M 8 8 L 35 8 L 8 135 Z" class="glass"/></g>
+    <g transform="translate(90,0)"><rect width="35" height="145" class="tube"/><rect width="27" height="137" x="4" y="4" class="tube-grid"/></g>
+    <g transform="translate(135,0)"><rect width="80" height="145" class="tube"/><rect width="72" height="137" x="4" y="4" class="tube-grid"/><path d="M 8 8 L 35 8 L 8 135 Z" class="glass"/></g>
+    <g transform="translate(225,0)"><rect width="80" height="145" class="tube"/><rect width="72" height="137" x="4" y="4" class="tube-grid"/><path d="M 8 8 L 35 8 L 8 135 Z" class="glass"/></g>
+    <g transform="translate(315,0)"><rect width="80" height="145" class="tube"/><rect width="72" height="137" x="4" y="4" class="tube-grid"/><path d="M 8 8 L 35 8 L 8 135 Z" class="glass"/></g>
+    <g transform="translate(405,0)"><rect width="80" height="145" class="tube"/><rect width="72" height="137" x="4" y="4" class="tube-grid"/><path d="M 8 8 L 35 8 L 8 135 Z" class="glass"/></g>
+    <g transform="translate(495,0)"><rect width="80" height="145" class="tube"/><rect width="72" height="137" x="4" y="4" class="tube-grid"/><path d="M 8 8 L 35 8 L 8 135 Z" class="glass"/></g>
+    <g transform="translate(585,0)"><rect width="80" height="145" class="tube"/><rect width="72" height="137" x="4" y="4" class="tube-grid"/><path d="M 8 8 L 35 8 L 8 135 Z" class="glass"/></g>
+    <g transform="translate(675,0)"><rect width="80" height="145" class="tube"/><rect width="72" height="137" x="4" y="4" class="tube-grid"/><path d="M 8 8 L 35 8 L 8 135 Z" class="glass"/></g>
+  </g>
+
+  <!-- Выключенные нити -->
+  <g transform="translate(45, 132)" text-anchor="middle" class="digit-off">
+    <text x="40">8</text><text x="107" y="-10">.</text><text x="175">8</text><text x="265">8</text><text x="355">8</text><text x="445">8</text><text x="535">8</text><text x="625">8</text><text x="715">%</text>
+  </g>
+
+  <!-- Светящиеся цифры с Матричным глитчем -->
+  <g class="glitch-layer">
+    <g transform="translate(45, 132)" text-anchor="middle" class="digit-on v1">
+      <text x="40">0</text><text x="107" y="-10">.</text><text x="175">5</text><text x="265">7</text><text x="355">1</text><text x="445">0</text><text x="535">2</text><text x="625">4</text><text x="715">%</text>
     </g>
-    
-    <!-- Основной текст -->
-    <text x="70" y="125" font-size="88">1</text>
-    <text x="130" y="115" font-size="70">.</text>
-    <text x="190" y="125" font-size="88">0</text>
-    <text x="270" y="125" font-size="88">4</text>
-    <text x="350" y="125" font-size="88">8</text>
-    <text x="430" y="125" font-size="88">5</text>
-    <text x="510" y="125" font-size="88">9</text>
-    <text x="590" y="125" font-size="88">6</text>
-    <text x="670" y="125" font-size="88">%</text>
+    <g transform="translate(45, 132)" text-anchor="middle" class="digit-on v2">
+      <text x="40">1</text><text x="107" y="-10">.</text><text x="175">1</text><text x="265">3</text><text x="355">0</text><text x="445">2</text><text x="535">4</text><text x="625">6</text><text x="715">%</text>
+    </g>
+    <g transform="translate(45, 132)" text-anchor="middle" class="digit-on v3">
+      <text x="40">0</text><text x="107" y="-10">.</text><text x="175">3</text><text x="265">3</text><text x="355">7</text><text x="445">1</text><text x="535">8</text><text x="625">7</text><text x="715">%</text>
+    </g>
+    <g transform="translate(45, 132)" text-anchor="middle" class="digit-on vFinal">
+      <text x="40">1</text><text x="107" y="-10">.</text><text x="175">0</text><text x="265">4</text><text x="355">8</text><text x="445">5</text><text x="535">9</text><text x="625">6</text><text x="715">%</text>
+    </g>
   </g>
 
-  <!-- Нижняя статусная строка -->
-  <text x="400" y="202" font-family="'Fira Code', 'Courier New', monospace" font-size="13" font-weight="bold" fill="#00ff66" letter-spacing="3" text-anchor="middle">
-    SYSTEM STATUS: READING STEINER // MATRIX_GLITCH_ACTIVE
-  </text>
+  <path d="M 0 30 L 900 30 M 0 60 L 900 60 M 0 90 L 900 90 M 0 120 L 900 120 M 0 150 L 900 150 M 0 180 L 900 180 M 0 210 L 900 210 M 0 240 L 900 240" class="scanline" />
+
+  <text x="50%" y="232" text-anchor="middle" class="subtext">SYSTEM STATUS: READING STEINER // MATRIX_GLITCH_ACTIVE</text>
 </svg>
