@@ -1,16 +1,54 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**UlquiorraCifer4/UlquiorraCifer4** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=00FF66&center=true&vCenter=true&width=600&lines=El+Psy+Kongroo;Future+Gadget+Laboratory+%23004;JAVA.gnome+//+Reading+Steiner" alt="Typing SVG" />
 
-Here are some ideas to get you started:
+  <p>
+    <b>Привет, я JAVA.gnome!</b> 🥼<br>
+    Разработчик, путешествующий по линиям мирового времени в поисках идеального кода без багов.
+  </p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  <a href="https://github.com/UlquiorraCifer4">
+    <img src="./divergence.svg" alt="Divergence Meter" width="100%" />
+  </a>
+
+</div>
+
+<br>
+
+## 🧪 Лабораторный инвентарь (Мой стек)
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Java-050E07?style=for-the-badge&logo=openjdk&logoColor=FF9900&labelColor=050E07&color=00FF66" alt="Java"/>
+  <img src="https://img.shields.io/badge/JavaScript-050E07?style=for-the-badge&logo=javascript&logoColor=F7DF1E&labelColor=050E07&color=00FF66" alt="JS"/>
+  <img src="https://img.shields.io/badge/HTML5-050E07?style=for-the-badge&logo=html5&logoColor=E34F26&labelColor=050E07&color=00FF66" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-050E07?style=for-the-badge&logo=css3&logoColor=1572B6&labelColor=050E07&color=00FF66" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-050E07?style=for-the-badge&logo=postgresql&logoColor=4169E1&labelColor=050E07&color=00FF66" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/1C_Enterprise-050E07?style=for-the-badge&logo=1c&logoColor=FF0000&labelColor=050E07&color=FF6600" alt="1C"/>
+</div>
+
+<br>
+
+## 🔬 Гаджеты Будущего (Текущие проекты)
+
+| Гаджет | Название / Описание | Статус |
+| :---: | :--- | :---: |
+| **`#001`** | 🎮 **LartronLauncher**<br>Кроссплатформенный Minecraft-лаунчер на Java (поддержка Ely.by, Microsoft Entra ID, кастомные темы и упаковка `jpackage`). | `[Alpha 1.0]` |
+| **`#002`** | 🛡️ **3X-UI VPN Telegram Bot**<br>Автоматизированный бот на Java для продажи и управления подписками VPN через API панелей 3X-UI. | `[In Dev]` |
+
+<br>
+
+## 📟 Монитор активности Лаборатории
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=UlquiorraCifer4&show_icons=true&theme=matrix&hide_border=false" height="165" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=UlquiorraCifer4&layout=compact&theme=matrix&hide_border=false" height="165" alt="Top Languages" />
+</div>
+
+<br>
+
+---
+
+<blockquote align="center">
+  <i>«Никто не знает, что принесет будущее. Именно поэтому его потенциал безграничен.»</i><br>
+  <b>— Окабэ Ринтаро (Хооин Кёма)</b>
+</blockquote>
