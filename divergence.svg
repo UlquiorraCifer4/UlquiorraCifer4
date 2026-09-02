@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%">
+  <!-- Внешний контейнер -->
+  <rect x="5" y="5" width="790" height="230" rx="15" fill="#050e07" stroke="#00ff66" stroke-width="2"/>
+  
+  <!-- Сетка глитча / фоновые карточки ламп -->
+  <g fill="#091c10" stroke="#00ff66" stroke-width="1.5" opacity="0.9">
+    <rect x="35" y="30" width="70" height="130" rx="8"/>
+    <rect x="117" y="30" width="26" height="130" rx="4"/>
+    <rect x="155" y="30" width="70" height="130" rx="8"/>
+    <rect x="235" y="30" width="70" height="130" rx="8"/>
+    <rect x="315" y="30" width="70" height="130" rx="8"/>
+    <rect x="395" y="30" width="70" height="130" rx="8"/>
+    <rect x="475" y="30" width="70" height="130" rx="8"/>
+    <rect x="555" y="30" width="70" height="130" rx="8"/>
+    <rect x="635" y="30" width="70" height="130" rx="8"/>
+  </g>
+
+  <!-- Цифры мировой линии (1.048596%) -->
+  <g font-family="'Courier New', monospace" font-weight="900" text-anchor="middle" fill="#00ff66">
+    <!-- Свечение (Glow) -->
+    <g opacity="0.3" fill="#00ff66">
+      <text x="70" y="125" font-size="88">1</text>
+      <text x="130" y="115" font-size="70">.</text>
+      <text x="190" y="125" font-size="88">0</text>
+      <text x="270" y="125" font-size="88">4</text>
+      <text x="350" y="125" font-size="88">8</text>
+      <text x="430" y="125" font-size="88">5</text>
+      <text x="510" y="125" font-size="88">9</text>
+      <text x="590" y="125" font-size="88">6</text>
+      <text x="670" y="125" font-size="88">%</text>
+    </g>
+    
+    <!-- Основной текст -->
+    <text x="70" y="125" font-size="88">1</text>
+    <text x="130" y="115" font-size="70">.</text>
+    <text x="190" y="125" font-size="88">0</text>
+    <text x="270" y="125" font-size="88">4</text>
+    <text x="350" y="125" font-size="88">8</text>
+    <text x="430" y="125" font-size="88">5</text>
+    <text x="510" y="125" font-size="88">9</text>
+    <text x="590" y="125" font-size="88">6</text>
+    <text x="670" y="125" font-size="88">%</text>
+  </g>
+
+  <!-- Нижняя статусная строка -->
+  <text x="400" y="202" font-family="'Fira Code', 'Courier New', monospace" font-size="13" font-weight="bold" fill="#00ff66" letter-spacing="3" text-anchor="middle">
+    SYSTEM STATUS: READING STEINER // MATRIX_GLITCH_ACTIVE
+  </text>
+</svg>
