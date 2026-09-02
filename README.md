@@ -11,6 +11,13 @@
     <img src="./divergence.svg" alt="Divergence Meter" width="100%" />
   </a>
 
+  <br><br>
+
+  <!-- Пасхалка с озвучкой Маюри -->
+  <a href="https://www.myinstants.com/media/sounds/tuturu_1.mp3" target="_blank">
+    <img src="https://img.shields.io/badge/🔊_Mayuri_Shiina-ТУ--ТУ--РУ♪-FF69B4?style=for-the-badge&labelColor=050E07&color=FF69B4" alt="Tuturu Sound" />
+  </a>
+
 </div>
 
 <br>
@@ -24,6 +31,7 @@
   <img src="https://img.shields.io/badge/CSS3-050E07?style=for-the-badge&logo=css3&logoColor=1572B6&labelColor=050E07&color=00FF66" alt="CSS3"/>
   <img src="https://img.shields.io/badge/PostgreSQL-050E07?style=for-the-badge&logo=postgresql&logoColor=4169E1&labelColor=050E07&color=00FF66" alt="PostgreSQL"/>
   <img src="https://img.shields.io/badge/1C_Enterprise-050E07?style=for-the-badge&logo=1c&logoColor=FF0000&labelColor=050E07&color=FF6600" alt="1C"/>
+  <img src="https://img.shields.io/badge/Linux_Mint-050E07?style=for-the-badge&logo=linuxmint&logoColor=87CF3E&labelColor=050E07&color=00FF66" alt="Linux Mint"/>
 </div>
 
 <br>
