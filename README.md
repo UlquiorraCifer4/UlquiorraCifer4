@@ -9,14 +9,11 @@
   <a href="https://github.com/UlquiorraCifer4">
     <img src="https://divergence-meter.vercel.app/api" alt="Divergence Meter" width="100%" />
   </a>
-
-  <br><br>
-
 </div>
 
 <br>
 
-## 🧪 Лабораторный инвентарь (Мой стек)
+## 🧪 Лабораторный инвентарь
 
 <div align="center">
   <img src="https://img.shields.io/badge/Java-050E07?style=for-the-badge&logo=openjdk&logoColor=FF9900&labelColor=050E07&color=00FF66" alt="Java"/>
@@ -28,7 +25,7 @@
 
 <br>
 
-## 🔬 Гаджеты Будущего (Текущие проекты)
+## 🔬 Гаджеты Будущего
 
 | Гаджет | Название / Описание | Статус |
 | :---: | :--- | :---: |
@@ -37,7 +34,7 @@
 
 <br>
 
-## 📟 Монитор активности Лаборатории
+## 📟 Монитор активности
 
 <div align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
@@ -47,7 +44,15 @@
 
 <br>
 
----
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/UlquiorraCifer4/UlquiorraCifer4/output/github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/UlquiorraCifer4/UlquiorraCifer4/output/github-snake.svg">
+    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/UlquiorraCifer4/UlquiorraCifer4/output/github-snake.svg">
+  </picture>
+</div>
+
+<br>
 
 <blockquote align="center">
   <i>«Никто не знает, что принесет будущее. Именно поэтому его потенциал безграничен.»</i><br>
