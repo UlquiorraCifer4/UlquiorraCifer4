@@ -12,10 +12,6 @@
 
   <br><br>
 
-  <a href="https://www.myinstants.com/media/sounds/tuturu_1.mp3" target="_blank">
-    <img src="https://img.shields.io/badge/🔊_Mayuri_Shiina-ТУ--ТУ--РУ♪-FF69B4?style=for-the-badge&labelColor=050E07&color=FF69B4" alt="Tuturu Sound" />
-  </a>
-
 </div>
 
 <br>
