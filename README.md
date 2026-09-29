@@ -40,8 +40,9 @@
 ## 📟 Монитор активности Лаборатории
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=UlquiorraCifer4&show_icons=true&theme=matrix&hide_border=false" height="165" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=UlquiorraCifer4&layout=compact&theme=matrix&hide_border=false" height="165" alt="Top Languages" />
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=UlquiorraCifer4&theme=matrix&no-frame=true&no-bg=true&margin-w=15" alt="Trophies" />
+  </a>
 </div>
 
 <br>
